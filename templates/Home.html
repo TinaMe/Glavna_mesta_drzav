@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drzave</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Pozdravljeni v spletni igri ugani glavno mesto drzave!</h1>
+
+    <h3>Izbrana drzava je:</h3>
+    <h4>{{ drzava }}</h4>
+    <img src="{{ slika }}" width="500px">
+
+    <form method="post" action="/Result">
+        <label for="input_mesto">Mesto:</label>
+        <input type="text" id="input_mesto" name="mesto">
+        <input type="hidden" value="{{ drzava }}" name="drzava">
+
+        <br>
+
+        <button type="submit">Preveri</button>
+    </form>
+
+
+</body>
+</html>
